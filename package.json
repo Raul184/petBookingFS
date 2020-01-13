@@ -1,0 +1,23 @@
+{
+  "name": "petbookingfs",
+  "version": "1.0.0",
+  "description": "MongoDB y ExpressJS",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Raul",
+  "license": "ISC",
+  "dependencies": {
+    "D": "^1.0.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.0.2",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.7",
+    "nodemon": "^2.0.2"
+  },
+  "proxy": "http://localhost:4000"
+}
