@@ -4,12 +4,16 @@
   "description": "MongoDB y ExpressJS",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Raul",
   "license": "ISC",
   "dependencies": {
     "D": "^1.0.0",
+    "axios": "^0.19.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^5.0.2",
     "config": "^3.2.4",
@@ -17,7 +21,13 @@
     "express-validator": "^6.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.7",
-    "nodemon": "^2.0.2"
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2",
+    "react-icons": "^3.8.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "proxy": "http://localhost:4000"
 }

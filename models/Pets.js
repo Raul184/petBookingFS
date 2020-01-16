@@ -15,14 +15,11 @@ const petsSchema = new mongoose.Schema({
     required: true
   },
   date: {
-    type: String ,
-    trim: true ,
-    required: true 
-  }, 
-  createdAt: {
-    type: Date
+    type: String,
+    default: Date.now
   }
 });
+
 
 module.exports = mongoose.model('pet' , petsSchema );
 
