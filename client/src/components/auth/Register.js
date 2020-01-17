@@ -37,10 +37,10 @@ const Register = ({ setAlert , register , history }) => {
   }
   return (
     <>
-      <h1 className="large text-primary">Sign Up</h1>
-      <p className="lead">
-        <FaUser/>Create your account
-      </p>
+      <h1 className="large text-primary">
+        Sign Up
+      </h1>
+      <p><FaUser/>Create your account</p>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input 
@@ -86,13 +86,12 @@ const Register = ({ setAlert , register , history }) => {
         </div>
         <input type="submit" className="btn btn-primary" value="Register"/>
       </form> 
-      <p className="my-1">Already have an account? <Link to='/login'>Sign In</Link></p>
+      <p>Already have an account? <Link to='/login'>Sign In</Link></p>
     </>
   )
 }
 
 Register.propTypes = {
-  setAlert: PropTypes.func.isRequired,
 }
 
 export default withRouter(Register);

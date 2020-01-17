@@ -2,11 +2,13 @@ import {
   GET_USERS ,
   GET_USER ,
   GET_USERS_FAIL,
-  GET_USER_FAIL
+  GET_USER_FAIL ,
+  SEARCH_USER
 } from '../actions/types';
 
 const initState = {
   users: [] ,
+  value: '' ,
   user: null ,
   loading: true ,
   error: []
@@ -33,6 +35,11 @@ export default ( state=initState , action ) => {
         user: payload ,
         loading: false 
       }
+    case SEARCH_USER: 
+        return {
+          ...state , 
+          users: state.users.filter( el => el.name.toLowerCase().startsWith(payload.toLowerCase()) )
+        }
     case GET_USER_FAIL:
       return {
         ...state ,

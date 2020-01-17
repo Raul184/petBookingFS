@@ -2,7 +2,8 @@ import {
   GET_USERS , 
   GET_USERS_FAIL ,
   GET_USER ,
-  GET_USER_FAIL
+  GET_USER_FAIL , 
+  SEARCH_USER
 } from './types';
 import axios from 'axios'
 
@@ -10,7 +11,6 @@ import axios from 'axios'
 export const getAllUsers = () => async dispatch => {
   try {
     const res = await axios.get('http://localhost:4000/api/users/superadmin')
-    console.log(res);
     dispatch({
       type: GET_USERS ,
       payload: res.data
@@ -41,4 +41,11 @@ export const getUser = (id) => async dispatch => {
       payload: { msg: error.response.statusText , status: error.response.status }
     })  
   }
+}
+
+export const searchUser = info => {  
+  return {
+    type: SEARCH_USER ,
+    payload: info
+  }  
 }

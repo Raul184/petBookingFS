@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { getAllUsers } from '../../actions/users';
 //comps.
 import Item from './Item';
+import Search from './Search';
+
 
 const Dashboard = ({ users: { users , loading } , getAllUsers }) => {
   useEffect(
@@ -14,6 +16,7 @@ const Dashboard = ({ users: { users , loading } , getAllUsers }) => {
   return (
     <>
      <h2>Dashboard</h2>
+     <Search />
       {
         users.length > 0 && !loading && (
           users.map( u => <Item key={u._id} info={u} />)
